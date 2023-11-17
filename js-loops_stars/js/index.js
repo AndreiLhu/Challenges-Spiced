@@ -19,6 +19,7 @@ function renderStars(filledStars) {
     newStar.addEventListener("click", () => {
       renderStars(i);
     });
+
     starContainer.appendChild(newStar);
   }
 
