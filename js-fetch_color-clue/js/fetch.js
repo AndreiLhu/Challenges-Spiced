@@ -28,7 +28,7 @@ export async function fetchNewColor() {
       const data = await response.json();
       const hexValue = data.hex.value;
       const closestHex = data.name.closest_named_hex;
-      colorToGuess(hexValue, closestHex);
+      setColorToGuess(hexValue, closestHex);
       return data;
     } else {
       console.log("Bad response");
