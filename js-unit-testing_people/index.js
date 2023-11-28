@@ -17,10 +17,12 @@ export function getPeopleByAge(people, age) {
 export function getPeopleNamesOlderThan(people, age) {
   return people
     .filter((person) => person.age > age)
-    .map((person) => `${person.firstName} ${person.lastName}`);
+    .map((person) => person.firstName + " " + person.lastName);
 }
 
-export function getPeopleByLastName(people, lastName) {}
+export function getPeopleByLastName(people, lastName) {
+  return people.map((person) => person.lastName === lastName);
+}
 
 export function findPersonById(people, id) {}
 
